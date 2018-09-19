@@ -15,26 +15,27 @@
     <script src="./lib/react.development.js"></script>
     <script src="./lib/react-dom.development.js"></script>
     <!-- <script crossorigin src="https://unpkg.com/styled-components/dist/styled-components.min.js"></script> -->
-    <!-- <script src="http://localhost:3001/bundle.js"></script> -->
     <script src="http://localhost:3002/:homeId/bundle.js"></script>
-    <script src="http://localhost:3003/bundle.js"></script>
+    <script src="http://localhost:3003/homes/:homeId/bundle.js"></script>
     <script src="http://localhost:3004/public/:id/dist/bundle.js"></script>
+    <!-- <script src="http://localhost:3001/app.js"></script> -->
     <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
     <script>
+      let homeId = window.location.pathname.match(/[0-9]+/g)[0];
       ReactDOM.render(
-        React.createElement(Gallery, { homeId: window.location.pathname }),
+        React.createElement(Gallery, { homeId: homeId }),
         document.getElementById('Gallery')
       );
       ReactDOM.render(
-        React.createElement(Description, { homeId: window.location.pathname }),
+        React.createElement(Description, { homeId: homeId }),
         document.getElementById('Description')
       );
       ReactDOM.render(
-        React.createElement(Booking, {homeId: window.location.pathname}),
+        React.createElement(Booking, { homeId: homeId }),
         document.getElementById('Booking')
       );
       // ReactDOM.render(
-      //   React.createElement(Reviews),
+      //   React.createElement(Reviews, { homeId: homeId }),
       //   document.getElementById('Reviews')
       // );
     </script>
