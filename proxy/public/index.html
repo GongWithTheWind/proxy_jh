@@ -28,17 +28,8 @@
     <script src="http://localhost:3001/app.js"></script>
     <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
     <script>
-      // const styledComponent = React.createElement('div', {style: {color: "Red"}});
-      // const styledComponent2 = window.styled.div`
-      //   background-color: red;
-      // `;
-
-      // ReactDOM.render(
-      //   React.createElement('div', {style: {border: "10px solid red"}}, 'blahblah'),
-      //   document.getElementById('test')
-      // )
-
       let homeId = window.location.pathname.match(/[0-9]+/g)[0];
+      
       ReactDOM.render(
         React.createElement(Gallery, 
           { homeId: homeId }),
