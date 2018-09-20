@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "route": "/reviews",
+      "address": "http://localhost:3001"
+    },
+    {
+      "route": "/description",
+      "address": "http://localhost:3002"
+    },
+    {
+      "route": "/gallery",
+      "address": "http://localhost:3003"
+    },
+    {
+      "route": "/booking/:id",
+      "address": "http://localhost:3004/house/:id"
+    }
+  ]
+}
