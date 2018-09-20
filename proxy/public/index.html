@@ -2,42 +2,61 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <!-- <link rel="stylesheet" href="/style.css"> -->
+    <link rel="stylesheet" href="./style.css">
     <title>BetterBnb</title>
   </head>
   <body>
-    <div id="Gallery"></div>
-    <div id="Description"></div>
-    <div id="Booking"></div>
-    <div id="Reviews"></div>
+    <div id="Main">
+      <div id="test"></div>
+      <div id="Gallery"></div>
+      <div id="Description"></div>
+      <div id="Booking"></div>
+      <div id="Reviews"></div>
+    </div>
     <!-- <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
       <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script> -->
     <script src="./lib/react.development.js"></script>
     <script src="./lib/react-dom.development.js"></script>
-    <!-- <script crossorigin src="https://unpkg.com/styled-components/dist/styled-components.min.js"></script> -->
+    <script crossorigin src="https://unpkg.com/styled-components/dist/styled-components.min.js"></script>
     <script src="http://localhost:3002/:homeId/bundle.js"></script>
     <script src="http://localhost:3003/homes/:homeId/bundle.js"></script>
     <script src="http://localhost:3004/public/:id/dist/bundle.js"></script>
-    <!-- <script src="http://localhost:3001/app.js"></script> -->
+    <script src="http://localhost:3001/app.js"></script>
     <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
     <script>
+      // const styledComponent = React.createElement('div', {style: {color: "Red"}});
+      // const styledComponent2 = window.styled.div`
+      //   background-color: red;
+      // `;
+
+      // ReactDOM.render(
+      //   React.createElement('div', {style: {border: "10px solid red"}}, 'blahblah'),
+      //   document.getElementById('test')
+      // )
+
       let homeId = window.location.pathname.match(/[0-9]+/g)[0];
       ReactDOM.render(
-        React.createElement(Gallery, { homeId: homeId }),
+        React.createElement(Gallery, 
+          { homeId: homeId }),
         document.getElementById('Gallery')
-      );
-      ReactDOM.render(
-        React.createElement(Description, { homeId: homeId }),
-        document.getElementById('Description')
-      );
+      )
+      
       ReactDOM.render(
         React.createElement(Booking, { homeId: homeId }),
         document.getElementById('Booking')
-      );
+      )
+
+      ReactDOM.render(
+        React.createElement(Description, 
+        { homeId: homeId, style: {border: "10px solid red"} }),
+        document.getElementById('Description')
+      )
+
       // ReactDOM.render(
       //   React.createElement(Reviews, { homeId: homeId }),
       //   document.getElementById('Reviews')
       // );
+      
     </script>
   </body>
 </html>

@@ -1,0 +1,25 @@
+#Main {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header"
+    "main sidebar"
+    "footer footer";
+}
+
+#Gallery {
+  grid-area: header;
+  object-fit: contain;
+  display: block;
+  width: auto;
+}
+
+#Description {
+  grid-area: main;
+}
+
+#Booking {
+  grid-area: sidebar;
+}
+
