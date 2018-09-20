@@ -2,19 +2,19 @@
   "routes": [
     {
       "route": "/reviews",
-      "address": "http://localhost:3001"
+      "address": "http://localhost:3001/"
     },
     {
-      "route": "/description",
-      "address": "http://localhost:3002"
+      "route": "/descriptions",
+      "address": "http://localhost:3002/",
+      "source": "/descriptions",
+      "reroute": "/descriptions"
     },
     {
-      "route": "/gallery",
-      "address": "http://localhost:3003"
-    },
-    {
-      "route": "/booking/:id",
-      "address": "http://localhost:3004/house/:id"
+      "route": "/booking",
+      "address": "http://localhost:3004/",
+      "source": "/booking",
+      "reroute": "/house"
     }
   ]
 }
