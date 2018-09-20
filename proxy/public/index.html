@@ -6,11 +6,15 @@
     <title>BetterBnb</title>
   </head>
   <body>
+    <img src="https://s3-us-west-1.amazonaws.com/betterbnb-description/bnbhead.png" 
+      style="position:fixed; width:100%; z-index:1; top:0px; left: 0px;"
+      draggable="false">
     <div id="Main">
-      <div id="test"></div>
       <div id="Gallery"></div>
       <div id="Description"></div>
-      <div id="Booking"></div>
+      <div id="BookingContainer">
+          <div id="Booking"></div>
+      </div>
       <div id="Reviews"></div>
     </div>
     <!-- <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
@@ -52,10 +56,10 @@
         document.getElementById('Description')
       )
 
-      // ReactDOM.render(
-      //   React.createElement(Reviews, { homeId: homeId }),
-      //   document.getElementById('Reviews')
-      // );
+      ReactDOM.render(
+        React.createElement(Reviews, { homeId: homeId }),
+        document.getElementById('Reviews')
+      );
       
     </script>
   </body>

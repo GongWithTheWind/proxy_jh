@@ -17,9 +17,18 @@
 
 #Description {
   grid-area: main;
+  margin-left: 75px;
+}
+
+#BookingContainer {
+  grid-area: sidebar;
+  margin-right: 75px;
 }
 
 #Booking {
-  grid-area: sidebar;
+  position: sticky;
 }
 
+#Reviews {
+  grid-area: footer;
+}
