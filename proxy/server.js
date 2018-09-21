@@ -28,16 +28,13 @@ for (route of routes) {
   );
 }
 
-// app.use('/gallery/:id', proxy({ 
-//   target: 'http://localhost:3003/',
-//   pathRewrite: (path, req) => {
-    
-//     let newPath = path.split('/').slice(2, 3);
-//     console.log(newPath);
-//     // newPath = newPath.replace('gallery', 'homes');
-//     return newPath;
-//   }
-// }));
+// Special formatting for gallery req
+app.use('/gallery/:id', proxy({ 
+  target: 'http://localhost:3003/',
+  pathRewrite: (path, req) => {
+    return '/homes/' + path.split('/').slice(2, 3).join('') + '/images';
+  }
+}));
 
 app.listen(port, () => {
   console.log(`server running at: http://localhost:${port}`);

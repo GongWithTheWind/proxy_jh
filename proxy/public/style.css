@@ -1,27 +1,23 @@
 #Main {
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  grid-template-areas: 
-    "header header"
-    "main sidebar"
-    "footer footer";
+  grid-template-rows: minmax(auto, auto);
+  grid-template-columns: repeat(1, 3.5fr 1.5fr);
 }
 
 #Gallery {
-  grid-area: header;
+  grid-area: 1/ 1/ 1/ 3;
   object-fit: contain;
   display: block;
   width: auto;
 }
 
 #Description {
-  grid-area: main;
+  grid-area: 2/ 1/ 2/ 2;
   margin-left: 75px;
 }
 
 #BookingContainer {
-  grid-area: sidebar;
+  grid-area: 2/ 2/ 2/ 3;
   margin-right: 75px;
 }
 
@@ -30,6 +26,6 @@
 }
 
 #Reviews {
-  grid-area: footer;
+  grid-area: 3/ 1/ 3/ 3;
   margin-left: 75px;
 }
