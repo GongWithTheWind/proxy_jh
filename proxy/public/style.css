@@ -1,7 +1,7 @@
 #Main {
   display: grid;
   grid-template-rows: minmax(auto, auto);
-  grid-template-columns: repeat(1, 3.5fr 1.5fr);
+  grid-template-columns: repeat(1, 3.25fr 1.75fr);
 }
 
 #Gallery {
@@ -13,19 +13,17 @@
 
 #Description {
   grid-area: 2/ 1/ 2/ 2;
-  margin-left: 75px;
+  margin-left: 5%;
 }
 
 #BookingContainer {
   grid-area: 2/ 2/ 2/ 3;
-  margin-right: 75px;
-}
-
-#Booking {
-  position: sticky;
+  z-index: 10;
+  margin-right: 5%;
 }
 
 #Reviews {
   grid-area: 3/ 1/ 3/ 3;
-  margin-left: 75px;
+  margin-left: 5%;
+  
 }

@@ -1,8 +1,10 @@
 {
   "routes": [
     {
-      "route": "/reviews",
-      "address": "http://localhost:3001/"
+      "route": "/homes",
+      "address": "http://localhost:3001/",
+      "source": "",
+      "reroute": ""
     },
     {
       "route": "/descriptions",

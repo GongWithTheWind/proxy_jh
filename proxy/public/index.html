@@ -29,7 +29,7 @@
     <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
     <script>
       let homeId = window.location.pathname.match(/[0-9]+/g)[0];
-      
+
       ReactDOM.render(
         React.createElement(Gallery, 
           { homeId: homeId }),
@@ -43,7 +43,7 @@
 
       ReactDOM.render(
         React.createElement(Description, 
-        { homeId: homeId, style: {border: "10px solid red"} }),
+        { homeId: homeId }),
         document.getElementById('Description')
       )
 

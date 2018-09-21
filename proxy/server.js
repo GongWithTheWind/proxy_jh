@@ -28,7 +28,7 @@ for (route of routes) {
   );
 }
 
-// Special formatting for gallery req
+// Special formatting for gallery request
 app.use('/gallery/:id', proxy({ 
   target: 'http://localhost:3003/',
   pathRewrite: (path, req) => {
