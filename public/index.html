@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <title>BetterBnb</title>
+  </head>
+  <body>
+    <img src="https://s3-us-west-1.amazonaws.com/cloud1314/Screen+Shot+2018-09-20+at+5.29.14+PM.png" 
+      width="100%"
+      draggable="false">
+    <div id="container">
+      <div id="gallery"></div>
+      <div id="bookingContainer">
+          <div id="booking"></div>
+      </div>
+      <div id="description"></div>
+      <div id="reviews"></div>
+    </div>
+    <img id="footer"
+      src="https://s3-us-west-1.amazonaws.com/cloud1314/Screen+Shot+2018-09-20+at+5.36.16+PM.png">
+    <!-- <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+      <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script> -->
+    <script src="./lib/react.development.js"></script>
+    <script src="./lib/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/styled-components/dist/styled-components.min.js"></script>
+    <!-- <script src="https://s3-us-west-1.amazonaws.com/betterbnb-description/bundles/description.js"></script>
+    <script src="https://s3-us-west-1.amazonaws.com/betterbnb-description/bundles/gallery.js"></script>
+    <script src="https://s3-us-west-1.amazonaws.com/betterbnb-description/bundles/booking.js"></script>
+    <script src="https://s3-us-west-1.amazonaws.com/betterbnb-description/bundles/reviews.js"></script> -->
+    <script src="http://localhost:3001/homes/:homeId/app.js"></script>
+    <script src="http://localhost:3002/:id/bundle.js"></script>
+    <script src="http://localhost:3003/homes/:homeId/bundle.js"></script>
+    <script src="http://localhost:3004/public/:id/dist/bundle.js"></script>
+    <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
+    <script>
+      let homeId = window.location.pathname.match(/[0-9]+/g)[0];
+
+      ReactDOM.render(
+        React.createElement(Gallery, 
+          { homeId: homeId }),
+        document.getElementById('gallery')
+      )
+      
+      ReactDOM.render(
+        React.createElement(Description, 
+        { homeId: homeId }),
+        document.getElementById('description')
+      )
+ 
+      ReactDOM.render(
+        React.createElement(Reviews, { homeId: homeId }),
+        document.getElementById('reviews')
+      )
+
+      ReactDOM.render(
+        React.createElement(Booking, { homeId: homeId }),
+        document.getElementById('booking')
+      )
+      
+    </script>
+  </body>
+</html>

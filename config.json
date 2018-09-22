@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "route": "/house/:id",
+      "address": "http://localhost:3004"
+    },
+    {
+      "route": "/descriptions/:id",
+      "address": "http://localhost:3002"
+    },
+    {
+      "route": "/homes/:homeId/images",
+      "address": "http://localhost:3003"
+    },
+    {
+      "route": "/",
+      "address": "http://localhost:3001"
+    }
+  ]
+}

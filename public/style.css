@@ -1,0 +1,34 @@
+#gallery {
+  grid-area: 1/ 1 / 1 / 5;
+}
+
+#description {
+  grid-area: 2/ 1 / 4 / 4;
+  width: 58.3333%;
+  margin-left: 15%;
+}
+
+#bookingContainer {
+  grid-area: 2/ 3 / 3 /4;
+  margin-left: 25%;
+  width: 41.6667%;
+}
+
+#booking {
+  position: absolute;
+}
+
+#reviews {
+  grid-area: 4/ 1 / 4 / 4;
+  margin-left: 15%;
+}
+
+#container {
+  display: grid;
+  grid-template-rows: minmax(auto, auto);
+  grid-template-columns: repeat(4, 1fr);
+}
+
+body {
+  margin: 0;
+}
