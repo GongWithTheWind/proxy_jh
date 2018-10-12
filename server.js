@@ -13,8 +13,8 @@ app.use(function(req, res, next) {
 });
 
 app.use('/home/:homeId', express.static(path.join(__dirname, 'public')));
-app.use('/descriptions/:homeId', proxy({target: 'http://localhost:3002'}));
-app.use('/descriptions', proxy({target: 'http://localhost:3002'}));
+app.use('/descriptions/:homeId', proxy({target: 'http://ec2-52-53-167-155.us-west-1.compute.amazonaws.com:3002'}));
+app.use('/descriptions', proxy({target: 'http://ec2-52-53-167-155.us-west-1.compute.amazonaws.com:3002'}));
 
 app.listen(port, () => {
   console.log(`server running at: http://localhost:${port}`);
